@@ -1,0 +1,91 @@
+/* new tweet */
+.new-tweet {
+  background-color: #eee;
+  border: 1px solid #E2E2E2;
+  border-radius: 7px; 
+  padding: 0.6em;
+}
+.new-tweet h2 {
+  border-bottom: 1px solid black;
+  margin-top: 0;
+}
+.new-tweet textarea {
+  width: 100%;
+  padding: 3px;
+}
+.new-tweet input {
+  background-color: #F1F1F1;
+}
+.counter {
+  float: right;
+  font-size: 0.7em;
+  font-style: italic;
+  padding: 0.5em;
+}
+.red {
+  color: red;
+}
+
+/* tweet */
+.tweet h3 {
+  display: inline-block;
+  font-size: 1.5em;
+  color: #60877F;
+  margin: 0 0.3em;
+  position: relative;
+  top: -1em;
+}
+.tweet {
+  border: 1px solid #E2E2E2;
+  border-radius: 7px;
+  margin-top: 1rem;
+  overflow: hidden;
+  height: 11.75rem;
+}
+.tweet header {
+  padding: 0.6em;
+  background-color: #F3F3F3;
+  height: 4.2rem;
+  opacity: 0.7;
+}
+.tweet img {
+  border-radius: 5%;
+  height: 3rem;
+  width: 3rem;
+}
+.tweet .handle {
+  font-size: 14px;
+  color:#808080;
+  float: right;
+  margin-top: 0.4em;
+}
+.tweet p {
+  margin: 2em 1em;
+}
+.tweet footer {
+  border-top: 0.9px solid #EEEEEE;
+  font-size: 0.7rem;
+  padding: 1em;
+}
+.tweet footer .icons {
+  display: none;
+  color: #2DCBBA;
+  float: right;
+  font-size: 1.3em;
+}
+.tweet footer i {
+  padding-left: 0.2em;
+}
+.tweet footer p {
+  margin: 0;
+  display: inline-block;
+}
+.tweet:hover {
+  border-color: #808080;
+}
+.tweet:hover .icons {
+  display: initial;
+}
+.tweet:hover header {
+  opacity: 1;
+}

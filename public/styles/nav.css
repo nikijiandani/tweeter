@@ -1,0 +1,24 @@
+nav {
+  background-color: #00a087;
+  color: #e8fdff;
+  height: 5rem;                   /* 80/16 */   
+  padding: 0 2rem;      
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+nav img {
+  width: 5rem;
+  height: 5rem;
+}
+
+#nav-bar .logo {
+  float: left;
+}
+
+#nav-bar .header {
+  float: left;
+  font-size: 2rem;
+  line-height: 5rem;
+  margin-left: 10px;
+}
