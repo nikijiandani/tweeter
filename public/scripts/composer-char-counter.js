@@ -5,9 +5,9 @@ $(document).ready(function() {
     const textareaLength = $(this).val().length;
     counter.text(140 - textareaLength);
     if(textareaLength > 140){
-      counter.toggleClass("red", true);
+      counter.addClass("red");
     } else {
-      counter.toggleClass("red", false);
+      counter.removeClass("red");
     }
   })
 });
