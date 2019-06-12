@@ -6,6 +6,7 @@ nav {
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 99;
 }
 nav img {
   width: 5rem;
