@@ -30,6 +30,7 @@ function createAndAppendTweet (event) {
   if(!validateForm()){
     return false;
   }
+
   $.ajax('/tweets/', { method: 'POST', data: $(this).serialize() })
   .then((newTweet) => {
     $('#tweet-container').prepend(createTweetElement(newTweet));
@@ -79,24 +80,23 @@ function convertTimestamp (date) {
 
 //creates tweet element and adds it to the DOM
 function createTweetElement (tweet) {
-  return $(`
-  <article class="tweet">
-  <header>
-  <img src="${tweet.user.avatars.regular}" alt="avatar">
-  <h3>${tweet.user.name}</h3>
-  <span class="handle">${tweet.user.handle}</span>
-  </header>
-  <p>${tweet.content.text}</p>
-  <footer>
-  <p>${convertTimestamp(tweet.created_at)}</p>
-  <span class="icons">
-  <i class="fa fa-flag" aria-hidden="true"></i>
-  <i class="fa fa-retweet" aria-hidden="true"></i>
-  <i class="fa fa-heart" aria-hidden="true"></i>
-  </span>
-  </footer>
-  </article>
-  `)
+  const article = $("<article>").addClass('tweet');
+  const header = $("<header>");
+  const img = $("<img>").attr("src", tweet.user.avatars.regular).attr("alt", "avatar");
+  const h3 = $('<h3>').text(tweet.user.name);
+  const span = $('<span>').text(tweet.user.handle).addClass('handle');
+  const content = $('<p>').text(tweet.content.text);
+  const footer = $('<footer>');
+  const timestamp = $('<p>').text(convertTimestamp(tweet.created_at));
+  const icons = $('<span>').addClass("icons");
+  const flag = $('<i>').addClass("fa fa-flag").attr('aria-hidden', "true");
+  const retweet = $('<i>').addClass("fa fa-retweet").attr('aria-hidden', "true");
+  const heart = $('<i>').addClass("fa fa-heart").attr('aria-hidden', "true");
+  
+  return article.append(
+    header.append(img, h3, span), 
+    content, 
+    footer.append(timestamp, icons.append(flag, retweet, heart)));
 }
 
 //creates the tweet and appends it to the tweet-container
