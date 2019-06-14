@@ -47,6 +47,7 @@ function createAndAppendTweet (event) {
   .then((newTweet) => {
     $('#tweet-container').prepend(createTweetElement(newTweet));
     this.reset();
+    $(this).parent().children(".new-tweet .counter").text("140");
   });
 }
 
