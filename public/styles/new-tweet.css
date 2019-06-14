@@ -4,6 +4,7 @@
   border: 1px solid #E2E2E2;
   border-radius: 7px; 
   padding: 0.6em;
+  display: none;
 }
 .new-tweet h2 {
   border-bottom: 1px solid black;
@@ -16,11 +17,19 @@
 .new-tweet input {
   background-color: #F1F1F1;
 }
+.new-tweet p {
+  display: none;
+  margin: 1em 0;
+  color: red;
+  font-size: 0.8em;
+}
 .counter {
   float: right;
   font-size: 0.7em;
   font-style: italic;
   padding: 0.5em;
+  position: relative;
+  top: -1.5em;
 }
 .red {
   color: red;
@@ -60,6 +69,7 @@
 }
 .tweet p {
   margin: 2em 1em;
+  word-break: break-all;
 }
 .tweet footer {
   border-top: 0.9px solid #EEEEEE;

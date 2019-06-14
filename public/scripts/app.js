@@ -6,7 +6,19 @@
 
 $(document).ready(function() {
 
-  $('#form').on('submit', createAndAppendTweet);
+  //toggle compose tweet section
+  $('.toggle-button').click(function() {
+    $('.new-tweet').slideToggle(function(){
+      $('.form textarea').select();
+    });
+  });
+
+  $('.form').on('submit', createAndAppendTweet);
+
+  //hide error when input detected
+  $('.new-tweet textarea').on("input", function() {
+    $(this).parent().parent().children("p").hide();
+  })
   
   loadTweets();
 
@@ -40,13 +52,13 @@ function createAndAppendTweet (event) {
 
 //checks the textarea input for falsey values and restricts tweet to 140 characters
 function validateForm () {
-  let formValue = $('#form textarea').val();
+  let formValue = $('.form textarea').val();
   if(!formValue){
-    alert("You cannot tweet an empty tweet :(");
+    $('.new-tweet p').text("You cannot tweet an empty tweet").show();
     return false;
   };
   if(formValue.length > 140){
-    alert("Please limit your tweet to 140 characters :(");
+    $('.new-tweet p').text("Please limit your tweet to 140 characters").show();
     return false;
   }
   return true;

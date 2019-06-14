@@ -23,3 +23,19 @@ nav img {
   line-height: 5rem;
   margin-left: 10px;
 }
+.links {
+  list-style-type: none;
+  float: right;
+}
+.links a {
+  text-decoration: none;
+  background-color: #E3FEFF;
+  color: #00A087;
+  border-radius: 100px;
+  padding: 6px 16px;
+  line-height: 3rem;
+}
+.links a:hover {
+  background-color: white;
+  color: black;
+}
