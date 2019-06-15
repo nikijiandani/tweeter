@@ -12,7 +12,8 @@ $(document).ready(function() {
       $('.form textarea').select();
     });
   });
-
+  
+  //create new tweet
   $('.form').on('submit', createAndAppendTweet);
 
   //hide error when input detected
@@ -77,19 +78,32 @@ function convertTimestamp (date) {
     return "Just now";
   }
   if(seconds < 60) {
-    return seconds + " seconds ago"
+    return "Few seconds ago";
   }
   if(minutes < 60) {
-    return minutes + " minutes ago";
+    if(minutes === 1){
+      return minutes + "minute ago"
+    } else {
+      return minutes + " minutes ago";
+    }
   }
   if (hours < 24) {
-    return hours + " hours ago";
+    if(hours === 1){
+      return hours + " hour ago";
+    } else {
+      return hours + " hours ago";
+    }
   }
   if (days < 30) {
-    return days + " days ago";
+    if(days === 1){
+      return days + "day ago";
+    } else {
+      return days + " days ago";
+    }
   }
   return "Over a month ago";
 }
+
 
 //creates tweet element and adds it to the DOM
 function createTweetElement (tweet) {
