@@ -44,7 +44,7 @@
 .tweet h3 {
   display: inline-block;
   font-size: 1.5em;
-  color: #60877F;
+  color: rgb(40, 46, 45);
   margin: 0 0.3em;
   position: relative;
   top: -0.26em;
@@ -66,7 +66,7 @@
 }
 .tweet .handle {
   font-size: 14px;
-  color:#808080;
+  color:#BD1550;
   float: right;
   margin-top: 0.6em;
 }

@@ -25,6 +25,22 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+.foot {
+  background-color: #F8CA00;
+  text-align: center;
+  margin-top: 1em;
+}
+.foot p {
+  margin: 0;
+  padding: 1em 0;
+}
+.foot p a {
+  text-decoration: none;
+  color: inherit;
+}
+.foot p a:hover {
+  text-decoration: underline;
+}
 .container {
   width: 95%;       
   margin: auto;
