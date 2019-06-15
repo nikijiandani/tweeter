@@ -47,7 +47,7 @@
   color: #60877F;
   margin: 0 0.3em;
   position: relative;
-  top: -1em;
+  top: -0.26em;
 }
 .tweet {
   border: 1px solid #E2E2E2;
@@ -58,22 +58,20 @@
 .tweet header {
   padding: 0.6em;
   background-color: #F3F3F3;
-  height: 4.2rem;
   opacity: 0.7;
 }
 .tweet img {
   border-radius: 5%;
-  height: 3rem;
-  width: 3rem;
+  width: 2rem;
 }
 .tweet .handle {
   font-size: 14px;
   color:#808080;
   float: right;
-  margin-top: 0.4em;
+  margin-top: 0.6em;
 }
 .tweet p {
-  margin: 2em 1em;
+  margin: 1em;
   word-break: break-all;
 }
 .tweet footer {
