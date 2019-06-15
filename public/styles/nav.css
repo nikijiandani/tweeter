@@ -46,3 +46,15 @@ nav img {
   background-color: #8A9B0F;
   color: white;
 }
+
+/* Media queries */
+@media (min-width: 600px) {
+  nav {
+    padding: 0.5rem 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  nav {
+    padding: 0.5rem 1.7rem;
+  }
+}
