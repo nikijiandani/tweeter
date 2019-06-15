@@ -7,14 +7,20 @@
   display: none;
 }
 .new-tweet h2 {
-  border-bottom: 1px solid black;
+  font-size: 1rem;
   margin-top: 0;
+  margin-bottom: 0.5rem;
+  display: inline-block;
 }
 .new-tweet textarea {
   width: 100%;
+  height: 5.5rem;
   padding: 3px;
 }
 .new-tweet input {
+  border-radius: 0.25rem;
+  width: 100%;
+  height: 2.75rem;
   background-color: #F1F1F1;
 }
 .new-tweet p {
@@ -29,7 +35,6 @@
   font-style: italic;
   padding: 0.5em;
   position: relative;
-  top: -1.5em;
 }
 .red {
   color: red;

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
     <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap" rel="stylesheet">
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -30,17 +30,20 @@
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Viewport meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
   <body>
 
     <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
-      <img class="logo" src="/images/bird.png">
+      <img class="logo" src="/images/bird.svg">
       <span class="header">Tweeter</span>
       <ul class="links">
         <li>
-          <a href="#" class="toggle-button">Tweet</a>
+          <button class="toggle-button">Compose</button>
         </li>
       </ul>
     </nav>
@@ -50,15 +53,16 @@
 
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
+        <span class="counter">140</span>
 
         <form action="/tweets" class="form" method="POST">
           <textarea name="text" placeholder="What are you humming about?"></textarea>
+          <p></p>
           <input type="submit" id="submit" value="Tweet">
         </form>
-        <p></p>
-        <span class="counter">140</span>
-      </section>
 
+      </section>
+      
       <section 
         id="tweet-container">
       </section>

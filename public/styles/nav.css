@@ -1,16 +1,17 @@
 nav {
-  background-color: #00a087;
-  color: #e8fdff;
-  height: 5rem;                   /* 80/16 */   
-  padding: 0 2rem;      
+  height: 4rem;
+  background-color: #490A3D;
+  color: #e8fdff;        
+  padding: 0.5rem;      
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 99;
 }
 nav img {
-  width: 5rem;
-  height: 5rem;
+  width: 2rem;
+  height: 2rem;
+  margin-top: 0.65rem;
 }
 
 #nav-bar .logo {
@@ -19,23 +20,29 @@ nav img {
 
 #nav-bar .header {
   float: left;
-  font-size: 2rem;
-  line-height: 5rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2rem;
   margin-left: 10px;
+  margin-top: 1rem;
+  color: white;
 }
 .links {
   list-style-type: none;
   float: right;
+  margin: 0;
 }
-.links a {
+.links button {
+  width: 100%;
   text-decoration: none;
-  background-color: #E3FEFF;
-  color: #00A087;
-  border-radius: 100px;
-  padding: 6px 16px;
-  line-height: 3rem;
+  background-color: #FFFFFF;
+  color: #8A9B0F;
+  border-radius: 6px;
+  padding: 3px 16px;
+  height: 2.75rem;
+  margin-top: 0.1rem;
 }
-.links a:hover {
-  background-color: white;
-  color: black;
+.links button:hover {
+  background-color: #8A9B0F;
+  color: white;
 }

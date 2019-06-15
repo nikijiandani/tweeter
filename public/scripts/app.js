@@ -17,7 +17,7 @@ $(document).ready(function() {
 
   //hide error when input detected
   $('.new-tweet textarea').on("input", function() {
-    $(this).parent().parent().children("p").hide();
+    $(this).parent().children("p").hide();
   })
   
   loadTweets();
