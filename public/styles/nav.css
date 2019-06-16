@@ -41,6 +41,7 @@ nav img {
   padding: 3px 16px;
   height: 2.75rem;
   margin-top: 0.1rem;
+  border: none;
 }
 .links button:hover {
   background-color: #8A9B0F;

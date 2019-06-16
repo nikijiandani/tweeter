@@ -47,3 +47,10 @@ body {
   background-color: white;
   margin-top: 4.5rem;
 }
+/* Media queries */
+
+@media (min-width: 769px) {
+  .container {
+    width: 60%;
+  }
+}

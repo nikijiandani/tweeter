@@ -22,6 +22,10 @@
   width: 100%;
   height: 2.75rem;
   background-color: #F8CA00;
+  border: none;
+}
+.new-tweet input:hover {
+  background-color: #e6bb00;
 }
 .new-tweet p {
   display: none;
@@ -35,6 +39,7 @@
   font-style: italic;
   padding: 0.5rem;
   position: relative;
+  top: -0.35rem;
 }
 .red {
   color: red;
@@ -72,7 +77,6 @@
 }
 .tweet p {
   margin: 0.6rem;
-  word-break: break-all;
 }
 .tweet footer {
   border-top: 0.9px solid #EEEEEE;
@@ -112,5 +116,11 @@
   }
   .new-tweet textarea {
     height: 3.5rem;
+  }
+  .new-tweet p {
+    margin: 0.6rem 0;
+  }
+  .tweet .handle {
+    float: right;
   }
 }
