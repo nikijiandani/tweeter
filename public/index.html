@@ -54,22 +54,21 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
 
+      <!-- Form to compose a new tweet -->
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <span class="counter">140</span>
-
         <form action="/tweets" class="form" method="POST">
           <textarea name="text" placeholder="What are you humming about?" wrap="soft"></textarea>
           <p></p>
           <input type="submit" id="submit" value="Tweet">
         </form>
-
       </section>
       
-      <section 
-        id="tweet-container">
-      </section>
+      <!-- Dynamically displays tweets from the database -->
+      <section id="tweet-container"></section>
     </main>
+
     <footer class="foot">
       <p>Made with lots of ❤️ and ☕ by <a href="https://github.com/nikijiandani">Niki Jiandani</a></p>
     </footer>
