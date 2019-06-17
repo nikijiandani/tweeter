@@ -46,8 +46,9 @@ function createAndAppendTweet (event) {
 
   $.ajax('/tweets/', { method: 'POST', data: $(this).serialize() })
   .then((newTweet) => {
-    $('#tweet-container').prepend(createTweetElement(newTweet));
     this.reset();
+    loadTweets();
+    // $('#tweet-container').prepend(createTweetElement(newTweet));
     $(this).parent().children(".new-tweet .counter").text("140");
   });
 }
@@ -66,45 +67,6 @@ function validateForm () {
   return true;
 }
 
-//outputs the time since the tweet was created taking a UNIX timestamp from the tweet as input
-function convertTimestamp (date) {
-  const ms = Date.now() - date;
-  const seconds = Math.round((ms / 1000));
-  const minutes = Math.round((ms / (1000 * 60)));
-  const hours = Math.round((ms / (1000 * 60 * 60)));
-  const days = Math.round((ms / (1000 * 60 * 60 * 24)));
-  
-  if(seconds < 5) {
-    return "Just now";
-  }
-  if(seconds < 60) {
-    return "Few seconds ago";
-  }
-  if(minutes < 60) {
-    if(minutes === 1){
-      return minutes + " minute ago"
-    } else {
-      return minutes + " minutes ago";
-    }
-  }
-  if (hours < 24) {
-    if(hours === 1){
-      return hours + " hour ago";
-    } else {
-      return hours + " hours ago";
-    }
-  }
-  if (days < 30) {
-    if(days === 1){
-      return days + " day ago";
-    } else {
-      return days + " days ago";
-    }
-  }
-  return "Over a month ago";
-}
-
-
 //creates tweet element and adds it to the DOM
 function createTweetElement (tweet) {
   const article = $("<article>").addClass('tweet');
@@ -114,7 +76,7 @@ function createTweetElement (tweet) {
   const span = $('<span>').text(tweet.user.handle).addClass('handle');
   const content = $('<p>').text(tweet.content.text);
   const footer = $('<footer>');
-  const timestamp = $('<p>').text(convertTimestamp(tweet.created_at));
+  const timestamp = $('<p>').text(moment(tweet.created_at).fromNow());
   const icons = $('<span>').addClass("icons");
   const flag = $('<i>').addClass("fa fa-flag").attr('aria-hidden', "true");
   const retweet = $('<i>').addClass("fa fa-retweet").attr('aria-hidden', "true");
@@ -128,6 +90,7 @@ function createTweetElement (tweet) {
 
 //creates the tweet and appends it to the tweet-container
 function renderTweets (tweetArr) {
+  $('#tweet-container').empty();
   tweetArr.forEach(element => {
     $('#tweet-container').append(createTweetElement(element));
   });
