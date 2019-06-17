@@ -82,7 +82,7 @@ function convertTimestamp (date) {
   }
   if(minutes < 60) {
     if(minutes === 1){
-      return minutes + "minute ago"
+      return minutes + " minute ago"
     } else {
       return minutes + " minutes ago";
     }
@@ -96,7 +96,7 @@ function convertTimestamp (date) {
   }
   if (days < 30) {
     if(days === 1){
-      return days + "day ago";
+      return days + " day ago";
     } else {
       return days + " days ago";
     }
